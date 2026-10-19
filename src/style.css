@@ -1,0 +1,292 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════
+   SYSTEMS IN MOTION — Light Theme Design System
+   Executive Technical Blueprint
+   ═══════════════════════════════════════════════════════════════ */
+@theme {
+  --color-paper: #F8FAFC;
+  --color-paper-card: #FFFFFF;
+  --color-paper-hover: #F1F5F9;
+  --color-teal-brand: #0D9488;
+  --color-teal-dark: #0F766E;
+  --color-teal-subtle: #F0FDFA;
+  --color-teal-border: #CCFBF1;
+  --color-cyan-glow: #06B6D4;
+  --color-slate-900: #0F172A;
+  --color-slate-800: #1E293B;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-slate-500: #64748B;
+  --color-slate-400: #94A3B8;
+  --color-slate-300: #CBD5E1;
+  --color-slate-200: #E2E8F0;
+  --color-slate-100: #F1F5F9;
+
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F8FAFC;
+  color: #0F172A;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #F8FAFC;
+  color: #0F172A;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Engineering Blueprint Grid Background */
+.circuit-bg {
+  background-color: #F8FAFC;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(13, 148, 136, 0.08) 1.2px, transparent 0);
+  background-size: 28px 28px;
+}
+
+.circuit-bg-dense {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(13, 148, 136, 0.1) 1.2px, transparent 0);
+  background-size: 18px 18px;
+}
+
+/* High Precision Card */
+.glow-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glow-card:hover {
+  border-color: #0D9488;
+  box-shadow: 0 10px 25px -5px rgba(13, 148, 136, 0.1), 0 8px 10px -6px rgba(13, 148, 136, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Section Index Numbers */
+.section-index {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: #0D9488;
+  background: #F0FDFA;
+  border: 1px solid #CCFBF1;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+/* Terminal Styling in Light Theme */
+.terminal-window {
+  background: #0F172A;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.25);
+}
+
+.terminal-bar {
+  background: #1E293B;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid #334155;
+}
+
+.terminal-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.terminal-body {
+  padding: 20px 24px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #94A3B8;
+}
+
+/* Skill Badge with Icons */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.skill-badge:hover {
+  border-color: #0D9488;
+  color: #0F766E;
+  background: #F0FDFA;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(13, 148, 136, 0.12);
+}
+
+/* Discipline Pill */
+.discipline-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: #F0FDFA;
+  border: 1px solid #99F6E4;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #0D9488;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.discipline-pill:hover {
+  background: #0D9488;
+  color: #FFFFFF;
+  border-color: #0D9488;
+  transform: translateY(-1px);
+}
+
+/* Loop Node */
+.loop-node {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.loop-node:hover,
+.loop-node.active {
+  transform: scale(1.05);
+}
+
+/* Engineering Principle Card */
+.principle-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Tab Filter */
+.tab-filter {
+  transition: all 0.2s ease;
+}
+
+.tab-filter.active {
+  background: #0D9488;
+  color: #FFFFFF;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.25);
+}
+
+/* Smooth Fade-in Animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8FAFC;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   PRINT STYLES (@media print)
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 12mm;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  body {
+    font-size: 9.5pt !important;
+    line-height: 1.35 !important;
+    background: white !important;
+    color: #0F172A !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+  }
+
+  .print-avoid-break {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .glow-card {
+    border: 1px solid #E2E8F0 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+  }
+
+  .circuit-bg,
+  .circuit-bg-dense {
+    background-image: none !important;
+  }
+
+  .skill-badge {
+    border: 1px solid #CBD5E1 !important;
+    background: #F8FAFC !important;
+    color: #334155 !important;
+  }
+
+  .terminal-window {
+    background: #F8FAFC !important;
+    border: 1px solid #CBD5E1 !important;
+  }
+  .terminal-bar {
+    background: #E2E8F0 !important;
+  }
+  .terminal-body {
+    color: #334155 !important;
+  }
+}
