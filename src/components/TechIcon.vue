@@ -68,6 +68,30 @@ const sizePx = computed(() => `${props.size}px`)
       <path d="M6.2 3h3.6L12 7.1 14.2 3h3.6L12 13.5 6.2 3z" fill="#35495E"/>
     </svg>
 
+    <!-- Tailwind CSS -->
+    <svg v-else-if="name === 'Tailwind CSS' || name === 'Tailwind'" viewBox="0 0 24 24" :width="size" :height="size" fill="#06B6D4">
+      <path d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/>
+    </svg>
+
+    <!-- Pinia -->
+    <svg v-else-if="name === 'Pinia'" viewBox="0 0 24 24" :width="size" :height="size" fill="#FFD859">
+      <path d="M12 2C10.5 4 9 6.5 9 9c0 3 2 6 2 9 0 1.5-.5 3-1.5 4 1.5.5 3.5.5 5 0-1-1-1.5-2.5-1.5-4 0-3 2-6 2-9 0-2.5-1.5-5-3-7z" />
+    </svg>
+
+    <!-- ApexCharts -->
+    <svg v-else-if="name === 'ApexCharts'" viewBox="0 0 24 24" :width="size" :height="size" fill="none" stroke="#008FFB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 3v18h18"/>
+      <path d="M7 16l4-7 4 5 5-9"/>
+    </svg>
+
+    <!-- REST APIs -->
+    <svg v-else-if="name === 'REST APIs' || name === 'REST API'" viewBox="0 0 24 24" :width="size" :height="size" fill="none" stroke="#0D9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="6" width="20" height="12" rx="3"/>
+      <circle cx="7" cy="12" r="1.5" fill="#0D9488"/>
+      <circle cx="12" cy="12" r="1.5" fill="#0D9488"/>
+      <circle cx="17" cy="12" r="1.5" fill="#0D9488"/>
+    </svg>
+
     <!-- MySQL -->
     <svg v-else-if="name === 'MySQL'" viewBox="0 0 24 24" :width="size" :height="size" fill="#00758F">
       <path d="M12 2C6.5 2 2 6.5 2 12c0 2.2.7 4.2 1.9 5.8L3 21l3.5-1c1.6 1.2 3.6 2 5.5 2 5.5 0 10-4.5 10-10S17.5 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/>

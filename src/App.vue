@@ -50,7 +50,7 @@ const isMobileMenuOpen = ref(false)
 const navItems = [
   { id: 'identity', num: '01', label: 'Identity', icon: User, tip: 'Whoami & Summary' },
   { id: 'stack', num: '02', label: 'Tech Stack', icon: Cpu, tip: '17 Core Technologies' },
-  { id: 'projects', num: '03', label: 'Selected Work', icon: FolderGit2, tip: 'Case Studies', badge: '2 CASES' },
+  { id: 'projects', num: '03', label: 'Selected Work', icon: FolderGit2, tip: 'Case Studies', badge: '3 CASES' },
   { id: 'principles', num: '04', label: 'Principles', icon: Brain, tip: 'How I Think' },
   { id: 'loop', num: '05', label: 'Loop', icon: RotateCw, tip: '7-Stage Cycle' },
   { id: 'contact', num: '06', label: 'Contact', icon: Send, tip: 'Get in Touch' }
@@ -59,7 +59,8 @@ const navItems = [
 // Active screenshot selection for each project
 const activeScreenshot = ref({
   bsis: 0,
-  etemp: 0
+  etemp: 0,
+  erp: 0
 })
 
 // Lightbox Modal State
@@ -238,6 +239,48 @@ const projects = [
         url: '/projects/e_temp/login.png',
         title: 'Operator Gateway & Auth',
         caption: 'Secure portal authentication interface protecting operational controls and telemetry configuration.'
+      }
+    ]
+  },
+  {
+    id: 'erp',
+    title: 'ERP - ELECTROHUB — Enterprise Retail Operations Platform',
+    subtitle: 'Unified enterprise resource planning platform integrating General Affair, multi-branch procurement, marketing, and inventory logistics.',
+    badge: 'ENTERPRISE ERP PLATFORM',
+    badgeColor: 'border-indigo-200 bg-indigo-50 text-indigo-700',
+    accentColor: '#4F46E5',
+    live: 'https://www.erp-electrohub.my.id/',
+    source: 'https://github.com/Gezod/erp-electrohub',
+    stack: [
+      { name: 'Vue.js', role: 'Vue 3 Reactive SPA' },
+      { name: 'Tailwind CSS', role: 'Modular UI System' },
+      { name: 'Pinia', role: 'State Management' },
+      { name: 'ApexCharts', role: 'Operational Analytics' }
+    ],
+    challenge: 'ElectroHub operates an omnichannel gadget & tech retail network across multiple metropolitan branches and logistics warehouses. Disjointed spreadsheet tracking across General Affair (GA), branch requisitions, critical stock replenishment, and multi-tier purchase approvals caused operational friction and delayed financial visibility. The objective was to engineer a high-performance web ERP system with real-time analytics to streamline branch-to-HQ workflows.',
+    contributions: [
+      'Architected and engineered a modular Single Page Application (SPA) using Vue 3, Vite, and Pinia centralized state stores.',
+      'Developed specialized operational dashboards for General Affair (GA), Marketing, and Logistics with real-time KPI indicators.',
+      'Integrated interactive data visualization with ApexCharts to monitor monthly purchasing trends, branch request quotas, and budget allocations.',
+      'Constructed multi-branch procurement workflows, critical inventory tracking (<= 10 units threshold alerts), and automated approval routing.',
+      'Designed responsive administrative interfaces using Tailwind CSS with a clean design system and quick-action toolkits.',
+      'Configured production deployment on cloud infrastructure with custom domain routing (erp-electrohub.my.id) and SSL security.'
+    ],
+    screenshots: [
+      {
+        url: '/projects/erp/dashboard-erp.png',
+        title: 'Executive Operations Portal',
+        caption: 'Centralized daily operations command center featuring real-time task counters, schedule metrics, and rapid-access shortcuts.'
+      },
+      {
+        url: '/projects/erp/ga-erp.png',
+        title: 'General Affair & Budget Analytics',
+        caption: 'Interactive GA management dashboard displaying operational expense trends, multi-tier purchase commitments, and critical stock threshold alarms.'
+      },
+      {
+        url: '/projects/erp/marketing-erp.png',
+        title: 'Marketing & Branch Request Center',
+        caption: 'Regional branch requisition tracker visualizing order accumulation across stores, purchase orders, and asset transfer pipelines.'
       }
     ]
   }
